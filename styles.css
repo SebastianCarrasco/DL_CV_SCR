@@ -1,0 +1,289 @@
+/* Establezco el margen y el padding de todos los elementos a 0 para evitar inconsistencias entre navegadores. 
+También aplico box-sizing para que el padding y el borde sean incluidos en el ancho total y alto de los elementos, 
+facilitando su diseño responsivo. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Defino estilos globales para el cuerpo del documento. Elijo 'Roboto' como la fuente para un look moderno y limpio, 
+un fondo claro y un color de texto oscuro para un contraste legible. El padding de 20px añade un poco de espacio alrededor de todo el contenido, 
+haciéndolo más atractivo visualmente. */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Personalizo el header y el footer con un fondo oscuro y texto en blanco para que se destaquen, 
+además de centrar su texto y aplicar un poco de padding para espacio interno. */
+header, footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Remuevo el estilo de lista por defecto y aplico padding a la izquierda para los `ul` en `nav` y `section`, 
+mejorando la presentación de las listas. */
+nav ul, section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+/* Ajusto la presentación de los elementos de lista en la navegación para que se muestren en línea, 
+con un margen entre ellos para mejor separación. */
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Especifico el color blanco para los enlaces dentro de la barra de navegación, asegurando que se destaquen contra el fondo oscuro. 
+También elimino el subrayado por defecto para un look más limpio. */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Defino el color de texto para los elementos de lista dentro de las secciones para mejorar la legibilidad y coherencia visual. */
+section ul li, section ul ul li {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Aplico un fondo blanco, márgenes, padding, un suave sombreado y bordes redondeados a las secciones para darles un aspecto elevado 
+y distinguirlos del fondo. */
+section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Personalizo el estilo de los títulos dentro de las secciones para que sean visualmente distintivos y coherentes. */
+h2, .details h3, .competencias h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Mejoro la legibilidad de párrafos y listas ajustando el interlineado. */
+p, li {
+    line-height: 1.5;
+}
+
+/* Añado un margen inferior a varios elementos para asegurar una separación visual adecuada entre las secciones de contenido. */
+.details, .competencias, ul {
+    margin-bottom: 20px;
+}
+
+/* Personalizo el estilo de las listas anidadas para diferenciarlas de las listas principales. */
+section ul ul li {
+    list-style-type: circle;
+}
+
+/* Fijo el footer en la parte inferior de la ventana del navegador para que siempre esté visible,
+asegurando un acceso fácil a la información de contacto o enlaces. */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Establezco un alto máximo inicial de 0 para el contenido del acordeón para que esté oculto inicialmente. 
+La transición suaviza el efecto de expansión/colapso. */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Estilizo el botón del acordeón para que sea visualmente atractivo y claro para el usuario, 
+con una transición suave en el cambio de color de fondo al pasar el cursor. */
+.accordion-button {
+    background-color: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Utilizo pseudo-elementos para añadir un símbolo de "más" a los botones del acordeón, 
+cambiando a un símbolo de "menos" cuando están activos. Esto indica visualmente si el contenido del acordeón está expandido o colapsado. */
+.accordion-button:after {
+    content: '\002B';
+    color: #777;
+    float: right;
+}
+.accordion-button.active:after {
+    content: "\2212";
+}
+
+/* Mejoro la interacción visual al pasar el cursor sobre los botones del acordeón, 
+cambiando el color de fondo para indicar que son elementos clicables. */
+.accordion-button:hover {
+    background-color: #ddd;
+}
+
+/* Estilo para el contenedor general que incluye la imagen de perfil, la imagen de portada, y mi información personal. 
+   Uso display: flex para alinear horizontalmente la imagen de perfil y mi información personal. */
+   .perfil-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    justify-content: center; /* Centra los elementos horizontalmente en el contenedor */
+    position: relative; /* Establece el contenedor como referencia de posicionamiento para los elementos absolutos */
+    margin-top: 20px;
+}
+/* Estilo para la imagen de perfil. Aseguro que tenga un tamaño y forma adecuados, 
+   y ahora también agrego z-index para asegurarme de que se sitúe encima de la imagen de portada. */
+   .imagen-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #222;
+    z-index: 1; /* Esto coloca la imagen de perfil sobre la imagen de portada */
+}
+/* Asegurando que la imagen de perfil y la información personal se posicionen correctamente sobre la imagen de portada */
+.imagen-portada, .imagen-perfil, .info-perfil {
+    z-index: 1; /* Establece el orden de apilamiento */
+}
+/* Estilo para la imagen de portada. La posiciono de manera absoluta para que ocupe todo el contenedor padre (.perfil-container), 
+   colocándola justo detrás de la imagen de perfil. */
+   .imagen-portada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/portada.jpg'); /* Asegúrate de cambiar esta ruta a tu imagen de portada */
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    z-index: -1; /* Asegura que la imagen de portada quede detrás de la imagen de perfil */
+}
+/* Estilo para mi información personal, posicionándola al lado de la imagen de perfil y asegurando que esté sobre la imagen de portada */
+.info-perfil {
+    margin-left: 20px; /* Añado espacio entre la imagen de perfil y la información personal */
+    color: #FFF; /* El color del texto, elige un color que contraste bien con mi imagen de portada */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el fondo de mi información personal */
+}
+
+/* Ajusto la barra de navegación para distribuir el espacio entre los elementos centrados y los iconos de las redes sociales. */
+nav {
+    display: flex;
+    justify-content: space-between; /* Mantiene los elementos al extremo */
+    align-items: center;
+    padding: 10px;
+}
+
+/* Centro los enlaces de navegación dentro de su nuevo contenedor */
+.nav-center {
+    display: inline-block;
+    justify-content: center; /* Centra los enlaces de navegación horizontalmente */
+    flex-grow: 1; /* Permite que el contenedor de navegación ocupe todo el espacio disponible */
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px; /* Espacio entre los enlaces */
+}
+
+/* Ajuste final para el último elemento de la lista, eliminando el margen derecho extra */
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.social-icons a {
+    margin-left: 10px; /* Espacio entre iconos */
+    color: #fff;
+    font-size: 20px; /* Tamaño de los iconos */
+}
+
+.social-icons a:hover {
+    color: #ddd; /* Color al pasar el ratón sobre los iconos */
+}
+
+/* Establece el ancho de la tabla al 100% para aprovechar todo el espacio disponible en el contenedor padre. 
+   Esto asegura que la tabla se expanda de manera uniforme. */
+   table {
+    width: 100%;
+    /* La propiedad 'border-collapse' se establece en 'collapse' para eliminar los espacios entre los bordes de las celdas,
+       creando una apariencia más unificada y limpia para la tabla. */
+    border-collapse: collapse;
+}
+
+/* Aplica estilos a los encabezados de columna ('th') y a las celdas ('td') de la tabla.
+   Esto incluye un borde ligero, alineación del texto a la izquierda y padding para espacio interno,
+   mejorando la legibilidad y estética de la tabla. */
+th, td {
+    border: 1px solid #ddd; /* Borde ligero para cada celda */
+    text-align: left; /* Alinea el contenido de la celda a la izquierda */
+    padding: 8px; /* Espacio interior alrededor del contenido de las celdas */
+}
+
+/* Específicamente para los encabezados de columna, se aplica un color de fondo para distinguirlos 
+   visualmente del resto de las celdas de la tabla. */
+th {
+    background-color: #f2f2f2; /* Color de fondo claro para los encabezados de columna */
+}
+
+/* Ajusta el tamaño de las imágenes dentro de las celdas para que sean consistentes. 
+   Esto ayuda a mantener la tabla ordenada y evita deformaciones en las imágenes. */
+td img {
+    width: 100px; /* Anchura fija para las imágenes dentro de las celdas */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción de las imágenes */
+}
+
+/* Mejora la legibilidad de la tabla alternando el color de fondo de las filas.
+   Esto hace que sea más fácil seguir la información a lo largo de una fila. */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo para las filas pares */
+}
+
+/* Asegura que las celdas ('td') se adapten al contenido, especialmente útil para el texto. */
+td {
+    white-space: nowrap; /* Evita que el texto dentro de la celda se divida en líneas */
+}
+
+/* Estilo inicial para las imágenes dentro de las celdas. */
+td img {
+    width: 150px; /* Tamaño inicial más grande para las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    cursor: pointer; /* Cambia el cursor para indicar que la imagen es clickeable */
+}
+
+/* Estilo para la imagen ampliada */
+.img-ampliada {
+    position: fixed; /* Posiciona la imagen de manera fija en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen perfectamente en la pantalla */
+    max-width: 80%; /* Limita el ancho máximo de la imagen ampliada */
+    max-height: 80%; /* Limita la altura máxima de la imagen ampliada */
+    z-index: 10; /* Asegura que la imagen esté sobre otros elementos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade un sombreado para resaltar la imagen */
+    border: 3px solid #fff; /* Borde alrededor de la imagen */
+}
+
+li[title] {
+    cursor: help; /* Cambia el cursor para indicar que hay más información disponible */
+    text-decoration: underline dotted; /* Añade un subrayado punteado como indicador visual */
+}
+
+/* Estilización del texto secundario al lado del título de la sección */
+.info-text {
+    font-size: 0.8rem; /* Reduce el tamaño del texto */
+    color: #666; /* Un color más suave que el texto principal */
+    font-style: italic; /* Opcional: estilo cursiva para diferenciar */
+    margin-left: 10px; /* Espacio entre el título y este texto */
+}

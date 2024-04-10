@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Establezco la codificación de caracteres para este documento HTML y aseguro la correcta visualización en diferentes dispositivos ajustando la vista -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El título de mi CV que aparecerá en la pestaña del navegador -->
+    <title>Sebastián Carrasco Ramirez - CV</title>
+    <!-- Enlazo mi hoja de estilos CSS para aplicar estilos personalizados a mi CV -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importo la fuente 'Roboto' de Google Fonts para darle a mi CV un aspecto más moderno y legible -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Importo la librería de Font-Awesome para poder utilizar iconos en mi página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Cabecera de mi CV que contiene la navegación principal -->
+    <header>
+        <nav>
+            <div class="nav-center">
+                <!-- Envuelvo los enlaces de navegación en un contenedor para poder centrarlos fácilmente -->
+                <ul class="nav-links">
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                </ul>
+            </div>
+            <!-- Contenedor separado para iconos de redes sociales -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sebasti%C3%A1n-carrasco-ramirez-04b18a96/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/SebastianCarrasco" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- Contenedor para mi imagen de perfil, la imagen de portada de fondo, y mi información personal -->
+    <div class="perfil-container">
+        <!-- Imagen de fondo que actúa como portada detrás de mi imagen de perfil y mi información personal -->
+        <div class="imagen-portada"></div>
+        <!-- Mi imagen de perfil que aparece sobre la imagen de portada -->
+        <img src="images/perfil.jpg" alt="Imagen de perfil" class="imagen-perfil">
+        <!-- Nuevo contenedor para mi información personal -->
+        <div class="info-perfil">
+            <h3>Sebastián Carrasco Ramirez</h3> <!-- Aquí pondré mi nombre -->
+            <p>Ingeniero en Informática Mención Desarrollo de Sistemas</p> <!-- Aquí pondré mi carrera -->
+            <p>Antofagasta, Chile</p> <!-- Aquí pondré mi ciudad de residencia -->
+        </div>
+    </div>
+    <!-- Sección de educación que detalla mi formación académica -->
+    <section id="educacion">
+        <h2>Educación<span class="info-text">Presiona y despliega la información</span></h2>
+        <!-- Uso un acordeón para hacer que la información sea más manejable visualmente, permitiendo expandir y colapsar el contenido -->
+        <div class="accordion">
+            <!-- Cada ítem del acordeón corresponde a una categoría de mi formación académica y competencias -->
+            <div class="accordion-item">
+                <!-- Botón para expandir/colapsar el contenido del ítem -->
+                <button class="accordion-button">Estudios Básicos</button>
+                <!-- Contenido detallado de mi formación básica -->
+                <div class="accordion-content">
+                    <!-- Aquí agrego el contenido de Competencias Básicas -->
+                    <ul>
+                        <li>Colegio Corazón de María - Antofagasta</li>
+                        <li>Colegio Antofagasta - Antofagasta</li>
+                        <li>Colegio Eagle School - Antofagasta</li>
+                        <li>Ingeniero en informática con mención en desarrollo de sistemas - AIEP</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Repito la estructura para cada categoría de competencias y formación adicional -->
+            <div class="accordion-item">
+                <button class="accordion-button">Competencias Básicas</button>
+                <div class="accordion-content">
+                    <!-- Detalle de mis competencias -->
+                    <ol>
+                        <li>Desarrollo de Software</li>
+                        <ul>
+                            <li>Programación en varios lenguajes y entornos.</li>
+                            <li>Desarrollo de aplicaciones empresariales.</li>
+                            <li>Gestión de proyectos de software.</li>
+                        </ul>
+                        <li>Soporte Técnico y TI</li>
+                        <ul>
+                            <li>Resolución de problemas y soporte mediante tickets y llamados.</li>
+                            <li>Gestión de usuarios y entrega de hardware.</li>
+                            <li>Mantenimiento de bases de datos.</li>
+                        </ul>
+                        <li>Planificación y Gestión</li>
+                        <ul>
+                            <li>Planificación de producción en ambientes industriales.</li>
+                            <li>Control y seguimiento de compras internacionales.</li>
+                            <li>Gestión de stock de hardware y software.</li>
+                        </ul>
+                        <li>Docencia y Formación</li>
+                        <ul>
+                            <li>Diseño e impartición de cursos técnicos.</li>
+                            <li>Evaluación y seguimiento de estudiantes.</li>
+                        </ul>
+                        <li>Liderazgo y Comunicación</li>
+                        <ul>
+                            <li>Liderazgo de equipos técnicos.</li>
+                            <li>Excelentes habilidades de comunicación verbal y escrita.</li>
+                        </ul>
+                        <li>Innovación y Actualización Continua</li>
+                        <ul>
+                            <li>Aplicación de nuevas tecnologías y métodos en la educación.</li>
+                            <li>Constante actualización en tecnologías emergentes.</li>
+                        </ul>
+                        <li>Seguridad Informática</li>
+                        <ul>
+                            <li>Fundamentos de ciberseguridad aplicados a la gestión.</li>
+                        </ul>
+                        <li>Habilidades en Cloud Computing</li>
+                        <ul>
+                            <li>Experiencia en soluciones de Cloud Computing con AWS.</li>
+                        </ul>
+                        <li>Desarrollo Web</li>
+                        <ul>
+                            <li>Conocimientos en HTML, CSS y JavaScript.</li>
+                        </ul>
+                        <li>Otros</li>
+                        <ul>
+                            <li>Certificación MTA en Base de Datos por Microsoft.</li>
+                            <li>Competencias en liderazgo y desarrollo de talentos a través de diversos talleres y
+                                certificaciones.</li>
+                        </ul>
+                    </ol>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Certificaciones, diplomados y cursos</button>
+                <div class="accordion-content">
+                    <!-- Detalle de mis certificaciones y cursos adicionales -->
+                    <ul>
+                        <li>2014: Certificación MTA Base de datos.</li>
+                        <li>2014: Taller de liderazgo y comunicaciones.</li>
+                        <li>2015: Seminario virtual “Amazon Soluciones de Cloud Computing con AWS” Global Knowledge.
+                        </li>
+                        <li>2015: Taller de desarrollo de talentos.</li>
+                        <li>2022: Curso de Desarrollo Web con HTML, CSS y JavaScript Básico – Udemy.</li>
+                        <li>2022: Cybersecurity for Managers – Campus BBVA – Coursera.</li>
+                        <li>2023: ChatGPT Bootcamp: From Beginner to Pro – Udemy.</li>
+                        <li>2023: Claves para la innovación en la docencia universitaria - Coursera.</li>
+                        <li>2023: HTML, CSS, and Javascript for Web Developers.</li>
+                        <li>2023: Liderazgo Para el Alto Desempeño - BCN School of business.</li>
+                        <li>2023: Ciberseguridad, Tarea de todos.</li>
+                        <li>2023: Inclusión de Personas con Discapacidad.</li>
+                        <li>2023: Alfabetización Digital.</li>
+                        <li>2023: Marketing Digital Ed. 4 AIEP - SENCE.</li>
+                        <li>2023: Growth Hacking AIEP - MOVISTAR - SENCE.</li>
+                        <li>2023: Economía Circular - School of Business.</li>
+                        <li>2023: Introducción a las principales normas ISO para empresas - School of Business.</li>
+                        <li>2023: Analítica Web AIEP - MOVISTAR - SENCE.</li>
+                        <li>2023: Ciberseguridad para la Educación Superior: Aspectos Normativos y Fundamentos de
+                            Seguridad - Universitaria Nacional - Universidad de Chile.</li>
+                        <li>2024: Fundamentos de programación y Diseño web - AIEP - SENCE - Universidad de playa ancha -
+                            Instituto profesional de Chile y Movistar.</li>
+                        <li>2024: Programación con JavaScript - AIEP - MOVISTAR - SENCE.</li>
+                        <li>2024: MASTERCLASS Fundamentos de programación y diseño web.</li>
+                        <li>2024: MASTERCLASS Crecimiento Digital de negocios y marca personal.</li>
+                        <li>2024: MASTERCLASS Diseño y gestión ágil de proyectos.</li>
+                        <li>2024: MASTERCLASS Diseño y programación web.</li>
+                        <li>2024: MASTERCLASS Emprendimiento Estratégico.</li>
+                        <li>2024: MASTERCLASS Marketing Digital y Gestión Estratégica.</li>
+                        <li>2024: MASTERCLASS Navegando por la transformación digital.</li>
+                        <li>2024: Diplomado Marketing Digital y Gestión Estratégica Ed 4.</li>
+                        <li>2024: CH Aprende WordPress de forma sencilla - AIEP-SENCE Ed 4.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de experiencia donde detallo mi trayectoria laboral -->
+    <section id="experiencia">
+        <h2>Experiencia <span class="info-text">Dejar puntero sobre la experiencia para más información</span></h2>
+        <ul>
+            <li
+                title="Como parte de un programa de innovación denominado 'Spinoff', participé en la migración tecnológica de varios sistemas internos del Ferrocarril de Antofagasta a Bolivia, pasando de ColdFusion a PHP. Este cambio mejoró significativamente la eficiencia y la escalabilidad de las operaciones internas.">
+                Programador Computacional, Ferrocarril Antofagasta-Bolivia (FCAB) | Ene. 2015 - Abr. 2015</li>
+            <li
+                title="Anteriormente, la información de los trabajadores, incluidos datos como días administrativos, vacaciones y licencias, se almacenaba en un archivo de Excel. Este método presentaba múltiples desafíos, incluidos problemas de seguridad y eficiencia. Lideré el desarrollo de un sistema web llamado 'Hoja de Vida', mejorando significativamente la gestión y la seguridad de los datos.">
+                Programador Computacional, SERVIU | Ene. 2016 - Mar. 2016</li>
+            <li
+                title="En el marco de un proyecto con OPENDAT, se me asignó la responsabilidad de ampliar un software minero existente con módulos adicionales destinados a controlar diversas facetas operacionales. Específicamente, lideré el desarrollo del módulo para gestionar multas por conducción indebida dentro del complejo minero. Para llevar a cabo este proyecto, trabajé en colaboración con un equipo compuesto por un administrador de proyecto y otros programadores. Este módulo se implementó con éxito, aportando mejoras significativas en la gestión y la seguridad del complejo.">
+                Desarrollador de software, Opendat S.A | jun. 2017 - ago. 2017</li>
+            <li
+                title="Se me encargó desarrollar un módulo específico para gestionar la emisión de cartas de amonestación a trabajadores que no devolvieran los montos otorgados por licencias médicas. Este módulo también abordó problemas de compatibilidad asociados con el uso de Windows Server 2008. Paralelamente, supervisé la configuración e implementación de una nueva mesa de ayuda utilizando 'Web Help Desk' de SolarWinds, en sustitución del sistema Altaris, que presentaba múltiples errores. Este proyecto resultó en una gestión más eficaz de las obligaciones financieras de los trabajadores y una mejora general en el sistema de soporte técnico.">
+                Desarrollador y Soporte de Software, IT Consultores SPA | feb. 2018 - ene. 2019</li>
+            <li
+                title="En mi rol como Planificador de Trabajos en Enermec, una empresa contratista para AES Gener, fui responsable de coordinar y planificar las operaciones semanales en las termoeléctricas Angamos y Cochrane, ubicadas en Mejillones. Mi labor garantizaba un flujo eficiente de actividades y una ejecución efectiva de los trabajos en ambas instalaciones.">
+                Planificador de Producción, Enermec | abr. 2019 - ago. 2021</li>
+            <li
+                title="Como Ingeniero de Soporte para el Ferrocarril de Antofagasta a Bolivia (FCAB), desempeñé un rol dual que incluía tanto el soporte técnico como la ingeniería de software. Fui responsable de brindar asistencia técnica integral, y adicionalmente, participé en proyectos de desarrollo y migración de aplicaciones para optimizar las operaciones internas de la empresa.">
+                Ingeniero de soporte de TI, Datamatic | ago. 2021 - ago. 2022</li>
+            <li
+                title="Como Ingeniero en Desarrollo de Software en Electrans, jugué un papel clave en la fundación del nuevo Departamento de Informática de la empresa. Lideré la creación e implementación de múltiples módulos de software diseñados para optimizar diversas áreas operacionales. Hasta la fecha, he desarrollado sistemas notables tales como:
+                - Sistema de seguimiento de compras internacionales: Optimiza la gestión y el rastreo de adquisiciones a nivel global.
+                - Sistema de Control y Gestión de Cajas Operacionales: Administra efectivamente los recursos financieros en operaciones diarias.
+                - Sistema de Control de Certificaciones de Instrumentos: Asegura la calidad y conformidad de los instrumentos utilizados en la empresa.">
+                Ingeniero de desarrollo de software, Electrans | jul. 2022 - sept. 2023</li>
+            <li
+                title="En mi rol de educador en la Universidad de Antofagasta, imparto clases en horario vespertino focalizadas en el desarrollo profesional técnico. Supervisé y dirigí una variedad de módulos especializados, incluyendo: 
+                - Taller de Mantenimiento de Bases de Datos: 15-09-2022 al 13-10-2022
+                - Taller de Mantenimiento de Hardware y Software: 24-11-2022 al 23-12-2022
+                - Hito 1 - Redes: 27-01-2023 al 01-02-2023
+                - Seguridad Aplicada a Tecnologías de la Información: 15-04-2023 al 08-05-2023
+                - Introducción a Redes de Datos: 13-05-2023 al 10-06-2023
+                - Administración de Bases de Datos: 15-06-2023 al 17-07-2023
+                - Taller de Mantenimiento de Bases de Datos: 31-08-2023 al 10-10-2023
+                - Hito 2: 14-12-2023 al 20-12-2023.
+                - Hito 1: 12-01-2024 al 17-01-2024.">
+                Docencia, Universidad de Antofagasta | sept. 2022 - actualidad</li>
+            <li
+                title="En mi rol actual, ofrezco soporte técnico integral en Minera Sierra Gorda, abarcando tanto la sede corporativa como las operaciones en campo. Mis principales tareas involucran la gestión eficaz de accesos y credenciales de usuarios, garantizando la operatividad; supervisión del suministro y configuración inicial de hardware, además del manejo de su documentación; apoyo en tareas administrativas para incrementar la productividad laboral; y la administración meticulosa del inventario de hardware y software, asegurando una gestión eficiente de los recursos tecnológicos.">
+                Ingeniero Especialista de Soporte, TRES60 | sept. 2023 - actualidad</li>
+        </ul>
+    </section>
+
+    <!-- Pie de página con mi información de contacto -->
+    <footer>
+        <p>Contacto: SebastianCarrascoRamirez@gmail.com</p>
+    </footer>
+</body>
+<!-- Script para la funcionalidad de expandir/colapsar los ítems del acordeón -->
+<script>
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.nextElementSibling;
+
+            button.classList.toggle('active');
+
+            if (button.classList.contains('active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = '0';
+            }
+        });
+    });
+</script>
+
+</html>
